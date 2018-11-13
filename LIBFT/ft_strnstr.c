@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-char	*ft_strstr(char *s1, char *s2)
+char	*ft_strnstr(char *s1, char *s2, size_t n)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	if (s2[0] == '\0')
@@ -15,11 +15,11 @@ char	*ft_strstr(char *s1, char *s2)
 			j = 0;
 			while (s2[j] == s1[i + j])
 			{
-				if (s2[j + 1] == '\0')
+				if (s2[j + 1] == '\0' || j >= n - 1)
 					return (&s1[i]);
 				else
 					j++;
-			}	
+			}
 		}
 		i++;
 	}
@@ -31,7 +31,7 @@ char	*ft_strstr(char *s1, char *s2)
 *	argc++;
 *	char *str1 = argv[1];
 *	char *str2 = argv[2];
-*	str1 = ft_strstr(str1, str2);
+*	str1 = ft_strnstr(str1, str2, 5);
 *	printf("%s", str1);
 *	return (0);
 *}

@@ -14,14 +14,14 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-int    main(int argc, char **argv)
-{
-       argc++;
-       char *str1 = argv[1];
-       char *str2 = argv[2];
-       int i = ft_strncmp(str1, str2, 5);
-       printf("%d", i);
-       return (0);
-}
-
+/*
+*int    main(int argc, char **argv)
+*{
+*       argc++;
+*       char *str1 = argv[1];
+*       char *str2 = argv[2];
+*       int i = ft_strncmp(str1, str2, 5);
+*       printf("%d", i);
+*       return (0);
+*}
+*/

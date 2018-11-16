@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/16 10:55:44 by rkergast          #+#    #+#             */
+/*   Updated: 2018/11/16 11:00:16 by rkergast         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
 int	ft_isascii(int c)
@@ -8,10 +20,10 @@ int	ft_isascii(int c)
 		return (0);
 }
 /*
-*int	main(void)
-*{
-*	int i = ft_isascii(42);
-*	printf("%d", i);
-*	return (0);
-*}
+**int	main(void)
+**{
+**	int i = ft_isascii(42);
+**	printf("%d", i);
+**	return (0);
+**}
 */

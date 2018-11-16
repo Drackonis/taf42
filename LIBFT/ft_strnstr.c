@@ -6,11 +6,12 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:07 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:20:52 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:06:53 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strnstr(char *s1, char *s2, size_t n)
 {

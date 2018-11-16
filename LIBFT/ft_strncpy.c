@@ -6,11 +6,12 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:48 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:29:35 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:06:28 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)
 {

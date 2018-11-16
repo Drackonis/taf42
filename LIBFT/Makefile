@@ -6,21 +6,25 @@
 #    By: rkergast <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 16:27:32 by rkergast          #+#    #+#              #
-#    Updated: 2018/11/09 16:27:40 by rkergast         ###   ########.fr        #
+#    Updated: 2018/11/16 13:33:28 by rkergast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Libft.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 EXEC = exe
+NAME = libft.a
 
-SRC = 
+SRC = ft_*.c
 
-all: $(EXEC)
+all: $(NAME)
 
-$(EXEC):
-	$(CC) -o $(FLAGS) $(SRC)
+compil:
+	$(CC) -c $(FLAGS) $(SRC)
+
+$(NAME): compil
+	ar rc $(NAME) *.o
+	ranlib $(NAME)
 
 clean:
 	rm -rf *.o
@@ -28,4 +32,4 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean $(EXEC)
+re: fclean $(NAME)

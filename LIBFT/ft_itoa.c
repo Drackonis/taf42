@@ -6,12 +6,13 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:56:31 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:16:14 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:03:14 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_itoa(int n)
 {
@@ -23,6 +24,7 @@ char	*ft_itoa(int n)
 
 	j = 0;
 	neg = 0;
+	i = n;
 	if (n < 0)
 	{
 		neg++;

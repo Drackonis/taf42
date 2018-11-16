@@ -6,11 +6,12 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:56:28 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:05:38 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:03:03 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

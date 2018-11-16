@@ -6,11 +6,12 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:22 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:19:22 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:05:53 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

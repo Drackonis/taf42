@@ -6,11 +6,12 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:39 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:24:16 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:04:37 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strcat(char *c1, const char *c2)
 {

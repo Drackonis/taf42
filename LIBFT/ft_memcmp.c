@@ -6,11 +6,13 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:06 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:12:20 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:03:49 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
 int		ft_memcmp(const void *str1, const void *str2, size_t n)
 {

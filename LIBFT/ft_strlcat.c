@@ -6,13 +6,12 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:20 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:01:06 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:26:35 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	ft_strlcat(char	*c1, const char *c2, size_t n)
+size_t	ft_strlcat(char *c1, const char *c2, size_t n)
 {
-	
 }

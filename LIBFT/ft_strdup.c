@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:14 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/09 16:54:39 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:18:23 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ char	*ft_strdup(char *src)
 	return (c);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = ft_strdup(str1);
-*	printf("%s", str2);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = ft_strdup(str1);
+**	printf("%s", str2);
+**	return (0);
+**}
 */

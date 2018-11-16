@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:28 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:00:49 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:17:23 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
-	const uint8_t*	c1;
-	uint8_t*	c2;
-	uint8_t*	c3;
+	const uint8_t	*c1;
+	uint8_t			*c2;
+	uint8_t			*c3;
 
 	i = 0;
 	c1 = src;
@@ -39,13 +39,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = argv[2];
-*	ft_memmove(str1, str2, 5);
-*	printf("%s", str1);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	ft_memmove(str1, str2, 5);
+**	printf("%s", str1);
+**	return (0);
+**}
 */

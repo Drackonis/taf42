@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:05 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/09 16:53:08 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:18:11 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ char	*ft_strcpy(char *str1, char *str2)
 	return (str1);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = argv[2];
-*	ft_strcpy(str1, str2);
-*	printf("%s", str1);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	ft_strcpy(str1, str2);
+**	printf("%s", str1);
+**	return (0);
+**}
 */

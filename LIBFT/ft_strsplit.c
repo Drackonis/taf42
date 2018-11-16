@@ -6,18 +6,18 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:25 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:01:26 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:39:09 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-char    **ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
-	int     i;
-	int	w;
-	int	t;
+	int		i;
+	int		w;
+	int		t;
 	char	**str;
 
 	i = 0;
@@ -52,7 +52,7 @@ char    **ft_strsplit(char const *s, char c)
 			if (!(str[w] = (char*)malloc(sizeof(char) * t)))
 				return (NULL);
 			w++;
-		}	
+		}
 	}
 	i = 0;
 	w = 0;
@@ -74,11 +74,12 @@ char    **ft_strsplit(char const *s, char c)
 	}
 	return (str);
 }
-
-int    main(int argc, char **argv)
-{
-       argc++;
-       char **strx = ft_strsplit(argv[1], ' ');
-       printf("%s \n %s \n %s", strx[1], strx[2], strx[3]);
-       return (0);
-}
+/*
+**int    main(int argc, char **argv)
+**{
+**       argc++;
+**      char **strx = ft_strsplit(argv[1], ' ');
+**       printf("%s \n %s \n %s", strx[1], strx[2], strx[3]);
+**       return (0);
+**}
+*/

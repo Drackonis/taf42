@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:07 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:00:59 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:25:33 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,13 @@ int	ft_strequ(char const *s1, char const *s2)
 	return (1);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = argv[2];
-*	int i = ft_strequ(str1, str2);
-*	printf("%d", i);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	int i = ft_strequ(str1, str2);
+**	printf("%d", i);
+**	return (0);
+**}
 */
-

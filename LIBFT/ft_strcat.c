@@ -6,13 +6,13 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:39 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:00:52 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:24:16 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcat(char* c1, const char *c2)
+char	*ft_strcat(char *c1, const char *c2)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -27,17 +27,16 @@ char	*ft_strcat(char* c1, const char *c2)
 		j++;
 	}
 	c1[i + j] = '\0';
-
 	return (c1);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = argv[2];
-*	ft_strcat(str1, str2);
-*	printf("%s", str1);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	ft_strcat(str1, str2);
+**	printf("%s", str1);
+**	return (0);
+**}
 */

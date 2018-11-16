@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:56:31 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:00:33 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:16:14 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 char	*ft_itoa(int n)
 {
-	int	i;
-	int	j;
-	int	t;
-	int	neg;
+	int		i;
+	int		j;
+	int		t;
+	int		neg;
 	char	*str;
 
 	j = 0;
@@ -52,11 +52,12 @@ char	*ft_itoa(int n)
 		str[j] = '-';
 	return (str);
 }
-
-int	main()
-{
-	int i = 123456789;
-	char *str1 = ft_itoa(i);
-	printf("%s\n", str1);
-	return (0);
-}
+/*
+**int	main()
+**{
+**	int i = 123456789;
+**	char *str1 = ft_itoa(i);
+**	printf("%s\n", str1);
+**	return (0);
+**}
+*/

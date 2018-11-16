@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:14 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:01:03 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:18:50 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	ft_striteri(argv[1], ft_putchar);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	ft_striteri(argv[1], ft_putchar);
+**	return (0);
+**}
 */

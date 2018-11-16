@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:42 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:01:34 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:22:12 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	ft_tolower(int c)
 		return (c);
 }
 /*
-*int	main(void)
-*{
-*	int i = ft_tolower((int)'A');
-*	printf("%d", i);
-*	return (0);
-*}
+**int	main(void)
+**{
+**	int i = ft_tolower((int)'A');
+**	printf("%d", i);
+**	return (0);
+**}
 */

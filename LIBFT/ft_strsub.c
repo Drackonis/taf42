@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:34 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:01:28 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:34:54 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strsub(char const *s, unsigned int i, size_t n)
 {
-	unsigned int    j;
-	char	*str;
+	unsigned int	j;
+	char			*str;
 
 	j = 0;
 	if (!(str = (char*)malloc(sizeof(char) * n)))
@@ -29,13 +29,13 @@ char	*ft_strsub(char const *s, unsigned int i, size_t n)
 	return (str);
 }
 /*
-*int    main(int argc, char **argv)
-*{
-*       argc++;
-*       char *str1 = argv[1];
-*       char *str2 = argv[2];
-*       str2 = ft_strsub(str1, 3, 5);
-*       printf("%s", str2);
-*       return (0);
-*}
+**int    main(int argc, char **argv)
+**{
+**       argc++;
+**       char *str1 = argv[1];
+**       char *str2 = argv[2];
+**       str2 = ft_strsub(str1, 3, 5);
+**       printf("%s", str2);
+**       return (0);
+**}
 */

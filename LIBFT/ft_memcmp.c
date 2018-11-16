@@ -6,17 +6,17 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:06 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:00:43 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:12:20 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+int		ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned int	i;
-	const uint8_t*	str3;
-	const uint8_t*	str4;
+	const uint8_t	*str3;
+	const uint8_t	*str4;
 
 	i = 0;
 	str3 = str1;
@@ -31,16 +31,16 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	int	i;
-*
-*	i = 0;
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = argv[2];
-*	i = ft_memcmp(str1, str2, 5);
-*	printf("%d", i);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	int	i;
+**
+**	i = 0;
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	i = ft_memcmp(str1, str2, 5);
+**	printf("%d", i);
+**	return (0);
+**}
 */

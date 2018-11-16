@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:51:40 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/09 16:53:49 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:16:30 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ void	*ft_memset(void *str, int c, size_t n)
 	return (str);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	ft_memset(str1, 42, 5);
-*	printf(str1);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	ft_memset(str1, 42, 5);
+**	printf(str1);
+**	return (0);
+**}
 */

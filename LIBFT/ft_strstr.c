@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:29 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 11:01:27 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/16 11:34:30 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,20 @@ char	*ft_strstr(char *s1, char *s2)
 					return (&s1[i]);
 				else
 					j++;
-			}	
+			}
 		}
 		i++;
 	}
 	return (NULL);
 }
 /*
-*int	main(int argc, char **argv)
-*{
-*	argc++;
-*	char *str1 = argv[1];
-*	char *str2 = argv[2];
-*	str1 = ft_strstr(str1, str2);
-*	printf("%s", str1);
-*	return (0);
-*}
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	str1 = ft_strstr(str1, str2);
+**	printf("%s", str1);
+**	return (0);
+**}
 */

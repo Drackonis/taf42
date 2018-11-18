@@ -28,17 +28,18 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		c1[i] = c2[i];
 		i++;
 		if (c1[i - 1] == c)
-			return (&dest[i]);
+			return (&c1[i]);
 	}
 	return (NULL);
 }
-
-int	main(int argc, char **argv)
-{
-	argc++;
-	char *str1 = argv[1];
-	char *str2 = argv[2];
-	ft_memccpy(str1, str2, 35, 5);
-	printf("%s",str1);
-	return (0);
-}
+/*
+**int	main(int argc, char **argv)
+**{
+**	argc++;
+**	char *str1 = argv[1];
+**	char *str2 = argv[2];
+**	ft_memccpy(str1, str2, 35, 5);
+**	printf("%s",str1);
+**	return (0);
+**}
+*/

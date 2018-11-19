@@ -18,26 +18,24 @@ char	*ft_itoa(int n)
 {
 	int		i;
 	int		j;
-	int		t;
+	char		t;
 	int		neg;
 	char	*str;
 
-	j = 0;
+	j = 1;
 	neg = 0;
-	i = n;
 	if (n < 0)
 	{
 		neg++;
 		j++;
 		n *= -1;
-		i = n;
 	}
+	i = n;
 	while (i > 9)
 	{
 		i /= 10;
 		j++;
 	}
-	j++;
 	if (!(str = (char*)malloc(sizeof(char) * j)))
 		return (NULL);
 	i = n;
@@ -46,10 +44,13 @@ char	*ft_itoa(int n)
 	{
 		j--;
 		t = i % 10;
-		str[j] = (char)t;
+		str[j] = t + '0';
+		printf ("//%d|%d//", j, i);
+		printf ("||%c", str[j]); 
+		i /= 10;
 	}
-	str[j] = (char)i;
 	j--;
+	str[j--] = i + '0';
 	if (neg)
 		str[j] = '-';
 	return (str);
@@ -57,9 +58,9 @@ char	*ft_itoa(int n)
 /*
 **int	main()
 **{
-**	int i = 123456789;
+**	int i = -987654321;
 **	char *str1 = ft_itoa(i);
-**	printf("%s\n", str1);
+**	printf("\n|\n%s\n|\n", str1);
 **	return (0);
 **}
 */

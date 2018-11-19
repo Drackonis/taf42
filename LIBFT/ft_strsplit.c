@@ -52,7 +52,7 @@ static char	**ft_split_len(char **str, char const *s, char c)
 		else
 		{
 			n = 0;
-			while (s[i] != c && s[i] != '\0')
+			while (s[i] != c && s[i])
 			{
 				n++;
 				i++;
@@ -87,6 +87,7 @@ static char	**ft_fill_str(char **str, char const *s, char c)
 				t++;
 			}
 			str[w][++t] = '\0';
+			t = 0;
 			w++;
 		}
 	}
@@ -99,27 +100,21 @@ char		**ft_strsplit(char const *s, char c)
 	char	**str;
 
 	w = 0;
-	printf("%c", '1');
 	w = ft_split_parts((const char *)s ,c);
 	if (!(str = (char**)malloc(sizeof(char*) * w)))
 		return (NULL);
-	printf("%c", '2');
 	ft_split_len(str, (char const *)s, c);
-	printf("%c", '3');
 	ft_fill_str(str, (char const *)s, c);
-	printf("%c", '5');
 	return (str);
 }
-
-int    main(int argc, char **argv)
-{
-	argc++;
-	printf("%c", '0');
-	char **strx = ft_strsplit(argv[1], ' ');
-	printf("%c", '6');
-	printf("%s\n", strx[0]);
-	printf("%s\n", strx[1]);
-	//printf("%s\n", strx[3]);
-	printf("%c", '7');
-	return (0);
-}
+/*
+**int    main(int argc, char **argv)
+**{
+**	argc++;
+**	argv = ft_strsplit(argv[1], ' ');
+**	printf("%s\n", argv[0]);
+**	printf("%s\n", argv[1]);
+**	printf("%s\n", argv[2]);
+**	return (0);
+**}
+*/

@@ -14,7 +14,28 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static int	ft_leneg(int n, int *neg, int *j)
+{
+	int	i;
+
+	*j = 1;
+	*neg = 0;
+	if (n < 0)
+	{
+		*neg += 1;
+		*j += 1;
+		n *= -1;
+	}
+	i = n;
+	while (i > 9)
+	{
+		i /= 10;
+		*j += 1;
+	}
+	return (n);
+}
+
+char		*ft_itoa(int n)
 {
 	int		i;
 	int		j;
@@ -22,20 +43,7 @@ char	*ft_itoa(int n)
 	int		neg;
 	char	*str;
 
-	j = 1;
-	neg = 0;
-	if (n < 0)
-	{
-		neg++;
-		j++;
-		n *= -1;
-	}
-	i = n;
-	while (i > 9)
-	{
-		i /= 10;
-		j++;
-	}
+	n = ft_leneg(n, &neg, &j);
 	if (!(str = (char*)malloc(sizeof(char) * j)))
 		return (NULL);
 	i = n;
@@ -45,8 +53,6 @@ char	*ft_itoa(int n)
 		j--;
 		t = i % 10;
 		str[j] = t + '0';
-		printf ("//%d|%d//", j, i);
-		printf ("||%c", str[j]); 
 		i /= 10;
 	}
 	j--;

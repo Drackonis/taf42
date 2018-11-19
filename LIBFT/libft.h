@@ -16,6 +16,13 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+typedef struct		s_list
+{
+	void		*content;
+	size_t		content_size;
+	struct s_list	*next
+}			t_list;
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *str, size_t n);
 int		ft_isalnum(int c);

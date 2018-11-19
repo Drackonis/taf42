@@ -12,14 +12,36 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
+/*#include "libft.h"*/
 
-char	**ft_strsplit(char const *s, char c)
+static int	ft_split_parts(char const *s, char c)
 {
-	int		i;
-	int		w;
-	int		t;
-	char	**str;
+	int	i;
+	int	n;
+	int	t;
+
+	i = 0;
+	n = 0;
+	t = 0;
+	while (s[i])
+	{
+		if (t == 1 && s[i] == c)
+			t = 0;
+		if (t == 0 && s[i] != c)
+		{
+			t = 1;
+			n++;
+		}
+		i++;
+	}
+	return (n);
+}
+
+static char	**ft_split_len(char **str, char const *s, char c)
+{
+	int	i;
+	int	n;
+	int	w;
 
 	i = 0;
 	w = 0;
@@ -29,35 +51,29 @@ char	**ft_strsplit(char const *s, char c)
 			i++;
 		else
 		{
-			w++;
-			while (s[i] != c || s[i])
-				i++;
-		}
-	}
-	if (!(str = (char**)malloc(sizeof(char*) * w)))
-		return (NULL);
-	i = 0;
-	w = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			i++;
-		else
-		{
-			t = 0;
-			while (s[i] != c || s[i])
+			n = 0;
+			while (s[i] != c && s[i] != '\0')
 			{
-				t++;
+				n++;
 				i++;
 			}
-			if (!(str[w] = (char*)malloc(sizeof(char) * t)))
+			if (!(str[w] = (char*)malloc(sizeof(char) * n)))
 				return (NULL);
 			w++;
 		}
 	}
+	return (str);
+}
+
+static char	**ft_fill_str(char **str, char const *s, char c)
+{
+	int	i;
+	int	t;
+	int	w;
+
 	i = 0;
-	w = 0;
 	t = 0;
+	w = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -75,12 +91,30 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	return (str);
 }
-/*
-**int    main(int argc, char **argv)
-**{
-**       argc++;
-**      char **strx = ft_strsplit(argv[1], ' ');
-**       printf("%s \n %s \n %s", strx[1], strx[2], strx[3]);
-**       return (0);
-**}
-*/
+
+char		**ft_strsplit(char const *s, char c)
+{
+	int		w;
+	char	**str;
+
+	w = 0;
+	printf("%c", '1');
+	w = ft_split_parts((const char *)s ,c);
+	if (!(str = (char**)malloc(sizeof(char*) * w)))
+		return (NULL);
+	printf("%c", '2');
+	ft_split_len(str, (char const *)s, c);
+	printf("%c", '3');
+	ft_fill_str(str, (char const *)s, c);
+	printf("%c", '5');
+	return (str);
+}
+
+int    main(int argc, char **argv)
+{
+	argc++;
+	printf("%c", '0');
+	char **strx = ft_strsplit(argv[1], ' ');
+	printf("%s \n %s \n %s", strx[1], strx[2], strx[3]);
+	return (0);
+}

@@ -57,7 +57,7 @@ static char	**ft_split_len(char **str, char const *s, char c)
 				n++;
 				i++;
 			}
-			if (!(str[w] = (char*)malloc(sizeof(char) * n)))
+			if (!(str[w] = (char*)malloc(sizeof(char) * (n + 1))))
 				return (NULL);
 			w++;
 		}
@@ -80,12 +80,13 @@ static char	**ft_fill_str(char **str, char const *s, char c)
 			i++;
 		else
 		{
-			while (s[i] != c || s[i])
+			while (s[i] != c && s[i])
 			{
 				str[w][t] = s[i];
 				i++;
 				t++;
 			}
+			str[w][++t] = '\0';
 			w++;
 		}
 	}
@@ -115,6 +116,10 @@ int    main(int argc, char **argv)
 	argc++;
 	printf("%c", '0');
 	char **strx = ft_strsplit(argv[1], ' ');
-	printf("%s \n %s \n %s", strx[1], strx[2], strx[3]);
+	printf("%c", '6');
+	printf("%s\n", strx[0]);
+	printf("%s\n", strx[1]);
+	//printf("%s\n", strx[3]);
+	printf("%c", '7');
 	return (0);
 }

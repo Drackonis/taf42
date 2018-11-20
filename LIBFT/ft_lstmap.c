@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,21 +14,28 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_memdel(void **ptr)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	if (ptr != NULL)
+	t_list	*r;
+	t_list	*tr;
+	t_list	*tl;
+
+	if (lst == NULL || f == NULL)
+		return (NULL);
+	tl = f(lst);
+	if ((r = ft_lstnew(tl->content, tl->content_size)))
 	{
-		free(ptr);
-		ptr = NULL;
+		tr = r;
+		lst = lst->next;
+		while (lst)
+		{
+			tl = (*f)(lst);
+			if (!(tr->next = ft_lstnew(tl->content, tl->content_size)))
+				return (NULL);
+			tr = tr->next;
+			lst = lst->next;
+		}
 	}
-}
-/*
-**int	main(int argc, char **argv)
-**{
-**	argc++;
-**	void	**str1 = argv[1];
-**	ft_memdel(str1);
-**	printf("%s", str1);
-**	return (0);
-**}
-*/
+	return (r);
+}	
+

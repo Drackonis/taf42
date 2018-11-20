@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,25 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_memdel(void **ptr)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (ptr != NULL)
+	if (*alst != NULL && new != NULL)
 	{
-		free(ptr);
-		ptr = NULL;
+		new->next = *alst;
+		*alst = new;
 	}
 }
-/*
-**int	main(int argc, char **argv)
-**{
-**	argc++;
-**	void	**str1 = argv[1];
-**	ft_memdel(str1);
-**	printf("%s", str1);
-**	return (0);
-**}
-*/

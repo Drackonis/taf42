@@ -6,13 +6,13 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:25 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:07:04 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:45:13 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-/*#include "libft.h"*/
+#include "libft.h"
 
 static int	ft_split_parts(char const *s, char c)
 {
@@ -100,7 +100,7 @@ char		**ft_strsplit(char const *s, char c)
 	char	**str;
 
 	w = 0;
-	w = ft_split_parts((const char *)s ,c);
+	w = ft_split_parts((const char *)s, c);
 	if (!(str = (char**)malloc(sizeof(char*) * w)))
 		return (NULL);
 	ft_split_len(str, (char const *)s, c);

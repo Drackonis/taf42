@@ -6,18 +6,18 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:36 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:04:26 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:41:19 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int     nb;
-	int     t;
-	char    c;
+	int		nb;
+	int		t;
+	char	c;
 
 	nb = n;
 	t = 0;
@@ -44,4 +44,3 @@ void    ft_putnbr_fd(int n, int fd)
 **      return (0);
 **}
 */
-

@@ -6,17 +6,17 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:36 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:04:26 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:38:43 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-void    ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	int     i;
-	char    b;
+	int		i;
+	char	b;
 
 	i = 0;
 	b = '\n';
@@ -35,4 +35,3 @@ void    ft_putendl_fd(char const *s, int fd)
 **      return (0);
 **}
 */
-

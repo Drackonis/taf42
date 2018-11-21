@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:20 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 12:04:54 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:41:41 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ size_t	ft_strlcat(char *c1, const char *c2, size_t n)
 		l++;
 	i = k;
 	if (n < i)
-		return(n + l);
+		return (n + l);
 	j = 0;
-	while(c2[j] && i + j < n - 1)
+	while (c2[j] && i + j < n - 1)
 	{
 		c1[i + j] = c2[j];
 		j++;

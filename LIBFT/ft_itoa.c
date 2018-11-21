@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:56:31 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:03:14 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:32:38 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static int	ft_leneg(int n, int *neg, int *j)
 {
-	int	i;
+	int		i;
 
 	*j = 1;
 	*neg = 0;
@@ -39,7 +39,7 @@ char		*ft_itoa(int n)
 {
 	int		i;
 	int		j;
-	char		t;
+	char	t;
 	int		neg;
 	char	*str;
 

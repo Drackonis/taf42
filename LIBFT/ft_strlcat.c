@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:20 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:41:41 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 15:56:53 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,14 @@ size_t	ft_strlcat(char *c1, const char *c2, size_t n)
 	c1[i + l] = '\0';
 	return (k + l);
 }
+/*
+**int		main(int argc, char **argv)
+**{
+**	int	i;
+**
+**	argc++;
+**	i = ft_strlcat(argv[1], argv[2], 5);
+**	printf("%d", i);
+**	return 0;
+**}
+*/

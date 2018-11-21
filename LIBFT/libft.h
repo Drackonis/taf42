@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:51:21 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:47:46 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/21 16:01:51 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(char *s1, char *s2);
 char				*ft_strsub(char const *s, unsigned int i, size_t n);
 char				*ft_strtrim(char const *s1);
+size_t				ft_strlcat(char *c1, const char *c2, size_t n);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 void				ft_putstr(char const *s);
@@ -77,7 +78,7 @@ void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstadd(t_list **alst, t_list *n);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 

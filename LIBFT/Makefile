@@ -24,10 +24,10 @@ $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-.c.o:
+%.o: %.c
 	$(CC) $(FLAGS) -o $@ -c $<
 
-clean:
+clean :
 	rm -rf $(OBJ)
 
 fclean: clean

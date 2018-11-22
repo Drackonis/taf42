@@ -15,7 +15,7 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c >= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	else
 		return (0);
@@ -23,8 +23,15 @@ int	ft_isalpha(int c)
 /*
 **int	main(void)
 **{
-**	int i = ft_isalpha(42);
-**	printf("%d", i);
-**	return (0);
+**	int	i;
+**	int	j;
+**	i = 0;
+**	while (i <= 127)
+**	{
+**		j = ft_isalpha(i);
+**		printf("|%d|%c|\n", j, i);
+**		i++;
+**	}
+**	return (1);
 **}
 */

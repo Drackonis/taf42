@@ -16,19 +16,18 @@
 
 void	ft_memdel(void **ptr)
 {
-	if (ptr != NULL)
+	if (ptr)
 	{
-		free(ptr);
-		ptr = NULL;
+		free(*ptr);
+		*ptr = NULL;
 	}
 }
 /*
 **int	main(int argc, char **argv)
 **{
 **	argc++;
-**	void	**str1 = argv[1];
-**	ft_memdel(str1);
-**	printf("%s", str1);
+**	ft_memdel((void**)argv[1]);
+**	printf("%s", argv[1]);
 **	return (0);
 **}
 */

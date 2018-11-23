@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1)
+char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		j;
@@ -24,17 +24,17 @@ char	*ft_strtrim(char const *s1)
 	i = 0;
 	j = 0;
 	k = 0;
-	while (s1[j])
+	while (s[j])
 		j++;
-	while (s1[i] == ' ' || s1[i] == '\n' || s1[i] == '\t')
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	while (s1[j] == ' ' || s1[j] == '\n' || s1[j] == '\t' || s1[j] == '\0')
+	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t' || s[j] == '\0')
 		j--;
 	if (!(str = (char*)malloc(sizeof(char) * (j - i))))
 		return (NULL);
 	while (i <= j)
 	{
-		str[k] = s1[i];
+		str[k] = s[i];
 		i++;
 		k++;
 	}

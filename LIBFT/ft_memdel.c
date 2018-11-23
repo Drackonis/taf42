@@ -14,12 +14,14 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_memdel(void **ptr)
+void	ft_memdel(void **ap)
 {
-	if (ptr)
+	if (!*ap)
+		return ;
+	if (*ap)
 	{
-		free(*ptr);
-		*ptr = NULL;
+		free(*ap);
+		*ap = NULL;
 	}
 }
 /*

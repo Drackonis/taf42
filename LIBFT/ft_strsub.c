@@ -14,17 +14,17 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int i, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	j;
 	char			*str;
 
 	j = 0;
-	if (!(str = (char*)malloc(sizeof(char) * n)))
+	if (!(str = (char*)malloc(sizeof(char) * len)))
 		return (NULL);
 	while (j < n)
 	{
-		str[j] = s[i + j];
+		str[j] = s[start + j];
 		j++;
 	}
 	return (str);

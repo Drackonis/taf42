@@ -14,17 +14,17 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnew(size_t n)
+char	*ft_strnew(size_t size)
 {
 	char			*str;
 	unsigned int	i;
 
 	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * n)))
+	if (!(str = (char*)malloc(sizeof(char) * size)))
 		return (NULL);
 	else
 	{
-		while (i < n)
+		while (i < size)
 		{
 			str[i] = '\0';
 			i++;

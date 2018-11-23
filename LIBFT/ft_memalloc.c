@@ -14,11 +14,11 @@
 #include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memalloc(size_t n)
+void	*ft_memalloc(size_t size)
 {
 	void	*ptr;
 
-	if (!(ptr = (void*)malloc(sizeof(void) * n)))
+	if (!(ptr = (void*)malloc(sizeof(void) * size)))
 		return (NULL);
 	else
 		return (ptr);

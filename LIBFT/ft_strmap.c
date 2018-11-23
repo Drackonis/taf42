@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:58:29 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:05:59 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/23 12:49:50 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 **int	main(int argc, char **argv)
 **{
 **	argc++;
-**	ft_strmap(argv[1], ft_putchar);
+**	char (*f) = ft_do_something(char);
+**	ft_strmap(argv[1], (*f));
 **	return (0);
 **}
 */

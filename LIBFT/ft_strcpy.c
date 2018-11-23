@@ -6,31 +6,27 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:05 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:05:05 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/23 13:33:22 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-char	*ft_strcpy(char *str1, char *str2)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	int	i;
-	int	j;
+	int		i;
 
 	i = 0;
-	j = 0;
-	while (str2[i])
-		i++;
-	while (j < i && str1[j])
+	if (!src)
+		return (dst);
+	while (src[i])
 	{
-		str1[j] = str2[j];
-		j++;
+		dst[i] = src[i];
+		i++;
 	}
-	if (str1[j])
-		while (str1[j])
-			str1[j++] = '\0';
-	return (str1);
+	dst[i] = '\0';
+	return (dst);
 }
 /*
 **int	main(int argc, char **argv)

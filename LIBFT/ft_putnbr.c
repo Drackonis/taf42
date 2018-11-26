@@ -15,18 +15,19 @@
 
 void	ft_putnbr(int n)
 {
-	int		nb;
+	unsigned int	nb;
 	int		t;
 	char	c;
 
-	nb = n;
 	t = 0;
-	if (nb < 0)
+	if (n < 0)
 	{
 		c = '-';
 		write(1, &c, 1);
-		nb = -nb;
+		nb = n * (-1);
 	}
+	else
+		nb = n;
 	if (nb >= 10)
 	{
 		t = nb % 10;
@@ -40,7 +41,7 @@ void	ft_putnbr(int n)
 /*
 **int	main(void)
 **{
-**	ft_putnbr(-2147483648);
+**	ft_putnbr(-2147483647 - 1);
 **	return (0);
 **}
 */

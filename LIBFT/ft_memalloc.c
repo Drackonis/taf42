@@ -16,12 +16,18 @@
 
 void	*ft_memalloc(size_t size)
 {
+	unsigned int	i;
 	void	*ptr;
 
+	i = 0;
 	if (!(ptr = (void*)malloc(sizeof(void) * size)))
 		return (NULL);
 	else
+	{
+		while (size--)
+			ptr[i++] = 0;
 		return (ptr);
+	}
 }
 /*
 **int	main(int argc, char **argv)

@@ -22,16 +22,14 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	j = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 		i++;
 	if (!(str = (char*)malloc(sizeof(char) * i)))
 		return (NULL);
 	while (j < i)
-	{
-		str[i] = s[i];
-		(*f)(str[i]);
-		i++;
-	}
+		str[i++] = (*f)(s[i]);
 	return (str);
 }
 /*

@@ -16,7 +16,8 @@
 
 static int	ft_leneg(int n, int *neg, int *j)
 {
-	int		i;
+	unsigned int	i;
+	unsigned int	x;
 
 	*j = 1;
 	*neg = 0;
@@ -24,29 +25,28 @@ static int	ft_leneg(int n, int *neg, int *j)
 	{
 		*neg += 1;
 		*j += 1;
-		n *= -1;
+		x = n * (-1);
 	}
-	i = n;
+	i = x;
 	while (i > 9)
 	{
 		i /= 10;
 		*j += 1;
 	}
-	return (n);
+	return (x);
 }
 
 char		*ft_itoa(int n)
 {
-	int		i;
+	unsigned int		i;
 	int		j;
 	char	t;
 	int		neg;
 	char	*str;
 
-	n = ft_leneg(n, &neg, &j);
+	i = ft_leneg(n, &neg, &j);
 	if (!(str = (char*)malloc(sizeof(char) * j)))
 		return (NULL);
-	i = n;
 	str[j] = '\0';
 	while (i > 9)
 	{
@@ -64,7 +64,7 @@ char		*ft_itoa(int n)
 /*
 **int	main()
 **{
-**	int i = -987654321;
+**	int i = -2147483647 - 1;
 **	char *str1 = ft_itoa(i);
 **	printf("\n|\n%s\n|\n", str1);
 **	return (0);

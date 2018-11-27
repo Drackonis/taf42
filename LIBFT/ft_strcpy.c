@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:05 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/23 13:33:22 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:56:22 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strcpy(char *dst, const char *src)
 	int		i;
 
 	i = 0;
-	if (!src)
-		return (dst);
 	while (src[i])
 	{
 		dst[i] = src[i];

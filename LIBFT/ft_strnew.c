@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:04 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:06:47 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:58:18 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnew(size_t size)
 	unsigned int	i;
 
 	i = 0;
-	if (!(str = (char*)malloc(sizeof(char) * size)))
+	if (!(str = (char*)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	else
 	{

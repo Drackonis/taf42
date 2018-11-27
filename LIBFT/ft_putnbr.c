@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 15:35:12 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:39:33 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 13:03:21 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 void	ft_putnbr(int n)
 {
 	unsigned int	nb;
-	int		t;
-	char	c;
+	int				t;
+	char			c;
 
 	t = 0;
 	if (n < 0)

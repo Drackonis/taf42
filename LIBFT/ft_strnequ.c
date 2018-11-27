@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:00 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:06:40 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:32:43 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 	unsigned int	i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	while ((s1[i] || s2[i]) && i < n)
 	{
 		if (s1[i] != s2[i])

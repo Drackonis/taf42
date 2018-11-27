@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:56:31 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:32:38 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 17:08:55 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static int	ft_leneg(int n, int *neg, int *j)
 		*j += 1;
 		x = n * (-1);
 	}
+	else
+		x = n;
 	i = x;
 	while (i > 9)
 	{
@@ -39,13 +41,13 @@ static int	ft_leneg(int n, int *neg, int *j)
 char		*ft_itoa(int n)
 {
 	unsigned int		i;
-	int		j;
-	char	t;
-	int		neg;
-	char	*str;
+	int					j;
+	char				t;
+	int					neg;
+	char				*str;
 
 	i = ft_leneg(n, &neg, &j);
-	if (!(str = (char*)malloc(sizeof(char) * j)))
+	if (!(str = (char*)malloc(sizeof(char) * (j + 1))))
 		return (NULL);
 	str[j] = '\0';
 	while (i > 9)

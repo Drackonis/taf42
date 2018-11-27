@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 15:35:53 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:37:12 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 17:24:07 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_putendl(char const *s)
 	int		i;
 	char	b;
 
+	if (!s)
+		return ;
 	i = 0;
 	b = '\n';
 	while (s[i])

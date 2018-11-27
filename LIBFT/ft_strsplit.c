@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:25 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:45:13 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 16:33:48 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		w;
 	char	**str;
 
+	if (!s || !c)
+		return (NULL);
 	w = 0;
 	w = ft_split_parts((const char *)s, c);
 	if (!(str = (char**)malloc(sizeof(char*) * w)))

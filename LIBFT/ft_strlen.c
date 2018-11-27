@@ -6,14 +6,14 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:22 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:05:53 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 17:31:09 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:57:36 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/21 15:41:19 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 13:01:49 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		nb;
-	int		t;
-	char	c;
+	unsigned int	nb;
+	int				t;
+	char			c;
 
-	nb = n;
 	t = 0;
-	if (nb < 0)
+	if (n < 0)
 	{
 		c = '-';
 		write(fd, &c, 1);
-		nb = -nb;
+		nb = n * (-1);
 	}
+	else
+		nb = n;
 	if (nb >= 10)
 	{
 		t = nb % 10;

@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:19 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/16 14:06:59 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/27 13:54:34 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,9 @@ char	*ft_strrchr(const char *s, int c)
 	while (s1[j])
 		j++;
 	j++;
-	while (j)
-	{
+	while (j-- >= 0)
 		if (s1[j] == c)
 			return (&s1[j]);
-		j--;
-	}
 	return (NULL);
 }
 /*

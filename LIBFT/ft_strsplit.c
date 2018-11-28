@@ -6,7 +6,7 @@
 /*   By: rkergast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 10:59:25 by rkergast          #+#    #+#             */
-/*   Updated: 2018/11/27 16:33:48 by rkergast         ###   ########.fr       */
+/*   Updated: 2018/11/28 18:42:16 by rkergast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int	ft_split_parts(char const *s, char c)
+static char	**ft_split_parts(char **str, char const *s, char c)
 {
 	int	i;
 	int	n;
@@ -34,7 +34,12 @@ static int	ft_split_parts(char const *s, char c)
 		}
 		i++;
 	}
-	return (n);
+	if (n == 0)
+		return (0);
+	if (!(str = (char **)malloc(sizeof(char *) * (n + 1))))
+		return (NULL);
+	str[n] = NULL;
+	return (str);
 }
 
 static char	**ft_split_len(char **str, char const *s, char c)
@@ -57,8 +62,9 @@ static char	**ft_split_len(char **str, char const *s, char c)
 				n++;
 				i++;
 			}
-			if (!(str[w] = (char*)malloc(sizeof(char) * (n + 1))))
+			if (!(str[w] = (char *)malloc(sizeof(char) * (n + 1))))
 				return (NULL);
+			str[w][n] = '\0';
 			w++;
 		}
 	}
@@ -96,27 +102,44 @@ static char	**ft_fill_str(char **str, char const *s, char c)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	int		w;
 	char	**str;
+	int		i;
+	int		j;
+	char	*c1;
 
-	if (!s || !c)
-		return (NULL);
-	w = 0;
-	w = ft_split_parts((const char *)s, c);
-	if (!(str = (char**)malloc(sizeof(char*) * w)))
-		return (NULL);
-	ft_split_len(str, (char const *)s, c);
-	ft_fill_str(str, (char const *)s, c);
-	return (str);
+	c1 = "";
+	str = NULL;
+	i = 0;
+	j = 0;
+	if (!(s == NULL || c == 0))
+		while (s[i] != '\0')
+			if (s[i++] != c)
+				j++;
+	if (j == 0 || s == NULL || c == 0 || s == c1)
+	{
+		if (!(str = (char **)malloc(sizeof(char *))))
+			return (NULL);
+		str[0] = NULL;
+		return (str);
+	}
+	if ((str = ft_split_parts(str, s, c)))
+		if ((str = ft_split_len(str, s, c)))
+			if ((str = ft_fill_str(str, s, c)))
+				return (str);
+	return (NULL);
 }
 /*
-**int    main(int argc, char **argv)
+**int    main()
 **{
-**	argc++;
-**	argv = ft_strsplit(argv[1], ' ');
-**	printf("%s\n", argv[0]);
-**	printf("%s\n", argv[1]);
-**	printf("%s\n", argv[2]);
+**	int	i = 0;
+**	char **argv = ft_strsplit(NULL, 0);
+**	printf("OK\n");
+**	while (argv[i])
+**	{
+**		if (argv[i])
+**			printf("%s\n", argv[i]);
+**		i++;
+**	}
 **	return (0);
 **}
 */
